@@ -9,7 +9,7 @@ import { TBTC } from "@keep-network/tbtc-v2.ts"
 
 // Create an Ethers provider. Pass the URL of an Ethereum mainnet node.
 // For example, Alchemy or Infura.
-const provider = new ethers.providers.JsonRpcProvider("https://cool-blissful-lake.ethereum-sepolia.quiknode.pro/de65ae9a862cf1b7e187d89b02875ebda114a10f/")
+const provider = new ethers.providers.JsonRpcProvider("https://lb.drpc.org/ogrpc?network=sepolia&dkey=AhW4HKeCG0v4p4tJVI_Mi7H7WLAY2I0R7qLeGtyyLTIM")
 // Create an Ethers signer. Pass the private key and the above provider.
 console.log(process.env.Private_key)
 const signer = new ethers.Wallet(process.env.Private_key, provider)
