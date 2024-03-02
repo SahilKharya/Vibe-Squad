@@ -27,8 +27,8 @@ async function main() {
     console.log(`Balance: ${balance}`);
     
     
-    const token: TokenId = Wormhole.tokenId("Sepolia","native");
-
+    const token: TokenId = Wormhole.tokenId("Sepolia","0x517f2982701695D4E52f1ECFBEf3ba31Df470161");
+    
     // Format it for base units
     const amount = ethers.parseUnits("0.01", srcChain.config.nativeTokenDecimals)
     // Create a TokenTransfer object, allowing us to shepherd the transfer through the process and get updates on its status

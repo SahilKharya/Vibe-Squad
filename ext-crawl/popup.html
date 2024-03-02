@@ -1,18 +1,76 @@
 <!doctype html>
 <html>
-  <head>
-    <a href="https://www.flaticon.com/free-icons/nps" title="nps icons">Nps icons created by Abdul-Aziz - Flaticon</a>
-    <title>vibesquad</title>
-    <style>
-      body {
-        font-family: sans-serif;
-        width: 200px;
-      }
-    </style>
-  </head>
 
-  <body>
-    <div id="message">Welcome to vibesquad</div>
-    <script src="popup.js"></script>
-  </body>
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vibesquad</title>
+  <script src="content.js"></script>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      width: 400px;
+    }
+
+    .card {
+      font-family: sans-serif;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      padding: 10px;
+    }
+
+    .card-header {
+      width: 100%;
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .card-body {
+      margin-top: 20px;
+    }
+
+    .product-name,
+    .product-price {
+      margin: 10px 0;
+    }
+
+    .add-to-cart {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .add-to-cart:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <div className="App">
+    {/*
+    <Counter /> */}
+    <div id="productCard" class="card">
+      <div id="productImage" class="card-header"></div>
+      <div class="card-body">
+        <h5 id="productName" class="product-name">Loading...</h5>
+        <p id="productPrice" class="product-price">Loading...</p>
+        <p id="productUrl" class="product-url">Loading...</p>
+      </div>
+      <div class="card-footer">
+        <button id="addToCart" class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- <script src="popup.js"></script> -->
+</body>
+
 </html>

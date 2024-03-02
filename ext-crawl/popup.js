@@ -2,6 +2,7 @@
 const storage = chrome.storage.local;
 
 const message = document.querySelector('#message');
+<a href="https://www.flaticon.com/free-icons/nps" title="nps icons">Nps icons created by Abdul-Aziz - Flaticon</a>
 
 // Check if there is CSS specified.
 async function run() {
