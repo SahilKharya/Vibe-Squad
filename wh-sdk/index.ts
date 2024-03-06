@@ -47,7 +47,7 @@ async function main() {
     // 2) Wait for the VAA to be signed and ready (not required for auto transfer)
     // Note: Depending on chain finality, this timeout may need to be increased.
     // See https://docs.wormhole.com/wormhole/reference/constants#consistency-levels for more info on specific chain finality.
-    const timeout = 22*60_000;
+    const timeout = 15*60_000;
     const attestIds = await manualXfer.fetchAttestation(timeout);
     console.log(`attestIds : ${attestIds}`);
     

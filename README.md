@@ -1,7 +1,5 @@
 # Vibe Squad
 
-The backend and smart contracts for this repo is at - https://github.com/akie08/skyrisedemo
-
 
 ## Base consumer app :
 I believe Base is quickly becoming the go to chain for social finance apps. Our app can help Base by providing a feature that makes social graphs across all these social finance apps composable that can seem like a quick opt-in into network effects based on the social graph architecture. In essence, I believe this could be very powerful.

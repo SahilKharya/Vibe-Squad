@@ -1,0 +1,77 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+model User{
+  id Int @id @default(autoincrement())
+  firstName String?
+  lastName String?
+  account String @unique
+  loginType Int @default(0)
+  username String @unique
+  email String?
+  phone String?
+  intro String?
+  bio String? @db.Text()
+  location Json?
+  social Json?
+  status UserStatus @default(New)
+  role Int @default(0)
+  images Json?
+  lastLogin DateTime
+  metadata Json?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("users")
+}
+
+enum UserStatus {
+  Invited
+  New
+  Active
+  Deactivated
+  Banned
+}
+
+model Keylink{
+  id Int @id @default(autoincrement())
+  key String @unique
+  network String
+  contract String
+  user String
+  redirect String?
+  metadata Json?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("keylinks")
+}
+
+model Cashback{
+  id Int @id @default(autoincrement())
+  userId Int
+  productData Json?
+  amount Float
+  denom String
+  metadata Json?
+  status Int @default(1)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("cashbacks")
+}
+
+// Status
+// 1 -> Claimable
+// 2 -> Claimed
+// 3 -> Blocked
